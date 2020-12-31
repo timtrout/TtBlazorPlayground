@@ -12,11 +12,11 @@ jobs:
     steps:
       # uses GitHub's checkout action to checkout code from the main branch
       - uses: actions/checkout@v2
-      # sets up the .NET SDK 5.0
-      - name: Setup .NET SDK 5.0
+      # sets up the .NET SDK 5.x
+      - name: Setup .NET SDK 5.x
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 5.0
+          dotnet-version: 5.x
       #publishes Blazor project to the release-folder
       - name: Publish .NET 5.0 Project
         run: dotnet publish TtBlazorPlayground.csproj -c Release -0 release --nologo
